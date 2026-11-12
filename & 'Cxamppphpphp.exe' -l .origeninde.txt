@@ -1,0 +1,8 @@
+& 'C:\xampp\php\php.exe' -l .\origen\index.php                                                            
+>>       
+>> if ($LASTEXITCODE -eq 0) {                                   
+>>     Copy-Item .\origen\index.php .\pruebas\index.php -Force -ErrorAction Stop                                                             
+>>     Write-Host "Versión publicada en el ambiente de pruebas."
+>> } else {
+>>     Write-Host "Hay un error de sintaxis. No se publicó el cambio."
+>> }
